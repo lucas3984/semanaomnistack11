@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './global.css'
+import Routes from './routes';
 
+// JSX (JavaScript + XML)
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes />
     </div>
   );
+
 }
 
 export default App;
+/*
+  //setCounter responsalveu por mudar o valor
+  let [count, setCounter] = useState(0);
+// Array [valor, funcaoDeAtualiacao]
+
+  function Increment(){
+    setCounter(count +1);
+    console.log(count);
+  }
+  return (
+    <div>
+      <Header>
+        Contador : {count} 
+      </Header>
+      <button onClick={Increment} > Incrementar </button>
+    </div>
+  );
+
+*/

@@ -1,12 +1,16 @@
 const express = require('express'); /* importando express pra variavel */ 
-const routes = require('./routes');
 const cors = require('cors');
+const routes = require('./routes');
+
 
 const app = express();
+
+app.use(cors({
+
+}))
 /* npm install nodemon -D, para instalar somente para desenvolvimento*/-
 app.use(express.json()); /* converte o json que recebe em js */
 app.use(routes);
-app.use(cors());
 app.listen(3333)
 /*
     rota / recurso
